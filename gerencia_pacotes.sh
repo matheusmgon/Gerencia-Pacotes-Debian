@@ -49,7 +49,7 @@ case "$validacao" in
         else
            echo -e "Voltando...\n"
         fi 
-      sleep 5
+      sleep 2.5
         
 echo "================================================"
 ;;
@@ -57,7 +57,7 @@ echo "================================================"
       echo "Informe o nome do pacote para ser instalado?"
       read nome
       apt install $nome
-      sleep 5
+      sleep 2.5
 
 echo "================================================"
 ;;
@@ -65,31 +65,31 @@ echo "================================================"
       echo "Informe o nome do pacote para ser removido?"
       read nome
       apt-get remove --purge $nome
-      sleep 5
+      sleep 2.5
 echo "================================================"
 ;;
    4)
       echo "Atualizando sistema..."
       apt update
-      sleep 5
+      sleep 2.5
 echo "================================================"
 ;;
     5)
        echo "Iniciando o processo..."
-       apt-get  -f install
-       sleep 5
+       apt-get -f install
+       sleep 2.5
 echo "================================================"
 ;;
      6)
        echo "Corrigindo erros..."
-       apt  autoremove
-       sleep 5
+       apt autoremove
+       sleep 2.5
 echo "================================================"
 ;;
     7)
     echo "Reparando..."
     dpkg --configure -a
-    sleep 5
+    sleep 2.5
 
 echo "================================================"
  ;;
